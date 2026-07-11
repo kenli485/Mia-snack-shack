@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Snack Shack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <h1>The Snack Shack</h1>
+      <p class="header-note">Fast snacks, clear prices, and easy pickup between classes.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu-section" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <h2 id="menu-title">Today's Menu</h2>
+      </div>
+      <p class="pickup-location">Pickup location: Snack Shack table outside Room 204.</p>
+
+      <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+    </section>
+
+    <div class="modal-backdrop" id="pickupModal" hidden>
+      <section class="pickup-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" id="closeModal" type="button" aria-label="Close pickup details">x</button>
+        <h2 id="modalTitle">Pickup Details</h2>
+        <p class="modal-snack" id="modalSnackName"></p>
+        <p id="pickupMessage"></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
